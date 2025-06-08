@@ -3,14 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ぱむるんの音楽サイト</title>
+  <link rel="preload" href="./fonts/zen-maru-gothic-v17-japanese-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/zen-maru-gothic-v17-japanese-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <title>ぱむるん OFFCIAL SITE</title>
   <style>
     body {
-      font-family: "Hiragino Maru Gothic Pro", "Yu Gothic", sans-serif;
-      background: linear-gradient(to bottom, #ffffff, #ffeef8);
+      font-family: 'Zen Maru Gothic', 'Rounded Mplus 1c', sans-serif;
+      background: linear-gradient(to bottom, #fff3fa, #fae4eb);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       color: #444;
       margin: 0;
       padding: 0;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+    body.font-loaded {
+    opacity: 1;
     }
     header {
       background-color: #ccf5d1;
@@ -21,13 +30,6 @@
     header h1 {
       margin: 0;
       font-size: 2rem;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      background-color: #fce4ec;
-      padding: 0.5rem;
     }
     nav a {
       text-decoration: none;
@@ -54,54 +56,107 @@
     .social-links a {
       display: inline-block;
       margin: 0 0.5rem;
-      color: #f06292;
+      color: #0066c0;
       text-decoration: none;
     }
   </style>
+  
+  <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="./main.css">
+  <!-- AOSのCSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script>
+    document.fonts.ready.then(() => {
+      document.body.classList.add('font-loaded');
+    });
+  </script>
 </head>
 <body>
+  <div id="loader">
+    <span class="loader-text">ぱむるん</span>
+  </div>
+
+  <div id="main-content" style="display: none;">
   <header>
-    <h1>ぱむるんの音楽サイト</h1>
-    <p>ふんわりかわいい音、届けます♪</p>
+    <h1>ぱむるん OFFCIAL SITE</h1>
   </header>
 
   <nav>
-    <a href="#about">プロフィール</a>
-    <a href="#works">作品</a>
-    <a href="#contact">連絡先</a>
+    <nav class="menu">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul>
+          <li><a href="https://pamupamulun.github.io/music">作品紹介</a></li>
+          <li><a href="https://pamupamulun.github.io/news">お知らせ</a></li>
+          <li><a href="https://pamupamulun.github.io/guideline">楽曲使用のガイドライン</a></li>
+          <li><a href="https://pamupamulun.github.io/contact">楽曲制作依頼・お問い合わせ</a></li>
+        </ul>
+    </nav>
   </nav>
 
-  <section id="about">
-    <h2>プロフィール</h2>
-    <p>ぱむるんですっ！</p>
-    <p>制作する楽曲のジャンルは、</p>
-    <ul>
-      <li>インスト、ピアノ曲</li>
-      <li>たまにボカロ</li>
-    </ul>
+  <div class="image-container" data-aos="fade-up">
+    <img src="ぱむるん.png" class="full-width-img" alt="ぱむるん" />
+  </div>
+
+  <section id="about" data-aos="fade-up">
+    <h2>ぱむるんについて</h2>
+    <p>小2から作曲を始める。</p>
+    <p>小6の時に音楽ゲーム「バンドリ！ガールズバンドパーティー！」に出会い、より本格的に作曲に取り組むように。</p>
+    <p>ガルパを始めて1年後くらいから他の音ゲーにも興味を持ち、「プロジェクトセカイ」など様々な音ゲーを始める。</p>
+    <p>プロセカでボカロに興味を持ち、2024年6月にDTMを始める。</p>
+    <p>そして、初めてのボカロを同年8月に「TNH62」名義でYouTube・Xに投稿(該当作品は修正のため一度削除、9月に再投稿。ニコニコ動画には11月に投稿)。</p>
+    <p>2025年3月に「ぱむるん」に改名。</p>
+    <p>そこそこ幅広いジャンルを作るが、特にArtcoreやロックを得意とする。</p>
+    <p>逆に激しめのHardcoreや、メタルは苦手。</p>
+    <p>イラスト・動画・作詞も担当することが多い(もちろん例外あり)。</p>
+    <p>ちなみに、現在は「ガルパ」や「プロセカ」の他に、「グルミク」、「ユメステ」、「Milthm」、「Phigros」、「TAKUMI³」など20種類程度の音ゲーをプレイしており、「pomelo」名義でX・YouTubeなどで活動している。</p>
   </section>
 
-  <section id="works">
-    <h2>作品紹介</h2>
-    <p>YouTube:</p>
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/VcaKiZ7Cuag" frameborder="0" allowfullscreen></iframe>
-    <p>niconico: <a href="https://www.nicovideo.jp/user/137280862" target="_blank">マイページはこちら</a></p>
+
+  <section id="about" data-aos="fade-up">
+    <h2>各種SNS</h2>
+    <p>メインで活動している2つ</p>
     <div class="social-links">
-      <p>その他SNSもチェックしてね！</p>
+      <a href="https://www.youtube.com/@pamupamulun" target="_blank">YouTube</a>
       <a href="https://x.com/pamupamulun" target="_blank">X（旧Twitter）</a>
+    </div>
+    <p>その他</p>
+    <div class="social-links">
+      <a href="https://www.nicovideo.jp/user/137280862" target="_blank">ニコニコ動画</a>
       <a href="https://www.tiktok.com/@pamupamulun" target="_blank">TikTok</a>
       <a href="https://www.instagram.com/pamupamulun/" target="_blank">Instagram</a>
     </div>
-  </section>
-
-  <section id="contact">
-    <h2>連絡先</h2>
-    <p>ご依頼・お問い合わせはこちらまで：<br />
-      <a href="mailto:pamupamulun@gmail.com">pamupamulun@gmail.com</a></p>
+    <p><h1 class="space"></h1></p>
+    <p>YouTubeなどでは、「かる～くゆる～くDTM(略してかるゆる)」というものをやってます！</p>
+    <p>ちょっと気分のときに短時間でパパっと仕上げる曲をシリーズ化しました～
+    <p>(かなり短時間で曲を作るシリーズなので、クオリティには期待しないでください)</p>
+    <p>↓例(パート3です)</p>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/CE5dgEj3tmg" frameborder="0" allowfullscreen></iframe>    
   </section>
 
   <div class="footer">
-    &copy; 2025 ぱむるん
+    <ul class="footer-links">
+      <li><a href="https://pamupamulun.github.io/music">作品紹介</a></li>
+      <li><a href="https://pamupamulun.github.io/news">お知らせ</a></li>
+      <li><a href="https://pamupamulun.github.io/guideline">楽曲使用のガイドライン</a></li>
+      <li><a href="https://pamupamulun.github.io/contact">お問い合わせ</a></li>
+    </ul>
+    <p>&copy; 2025 Pamulun. All rights reserved.</p>                                                                                                     
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" rel="script" src="main.js"></script>
+  <!-- AOSのJS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    $(function () {
+      $('#main-content').fadeIn(200, function () {
+        AOS.init();
+      });
+    });
+  </script>
 </body>
 </html>
