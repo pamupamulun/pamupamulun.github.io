@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Zen Maru Gothic';
+    src: url('fonts/zen-maru-gothic-v17-japanese-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .loader-text {
+    font-size: 5rem;
+    color: #a6fb87;
+    font-family: 'Zen Maru Gothic', 'Rounded Mplus 1c', sans-serif;
+    transform: rotate(-5deg);
+    text-shadow:
+      -2px -2px 0 #fff,
+       2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+       2px  2px 0 #fff;
+    /* 追加（WebKit限定） */
+    -webkit-text-stroke: 1.5px white;
+  }
+
+/* メニューのスタイル */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* 初期状態では画面の外に隠れている */
+  width: 300px;
+  height: 100%;
+  background-color: #80F0B0;
+  color: #333;
+  transition: right 0.3s ease; /* スライドインのアニメーション */
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+/* メニューが開いているとき */
+.menu.open {
+  right: 0;
+}
+
+/* ボタンのスタイル */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+/* バツ印に変化するスタイル */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* メニューリストのスタイル */
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 80px;
+}
+
+.menu li {
+  padding: 20px 0;
+  border-bottom: 1px solid #444;
+}
+
+.menu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.footer {
+  width: 100%;
+  margin: 0;
+  padding: 1.5rem;
+  background-color: #ffffffcc;
+  border-radius: 1rem 1rem 0 0; /* 上だけ丸める*/
+  box-shadow: 0 0 10px #ddd;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-links a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #fff0f5;
+  border-radius: 0.75rem;
+  border: 2px solid #f8bbd0;
+  color: #f06292;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+  background-color: #fce4ec;
+  color: #e91e63;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+}
+
+.full-width-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.image-wrapper {
+  background: #fff;  /* ← 背景の透け防止 */
+  padding: 0;
+  margin: 0;
+}
+
+.image-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.space {
+  margin-top: 60px;
+}
+
+.contact-title {
+  text-align: center;
+  color: #f06292;
+}
