@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preload" href="./fonts/zen-maru-gothic-v17-japanese-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/zen-maru-gothic-v17-japanese-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="./fonts/zen-maru-gothic-v17-japanese-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>ぱむるん OFFICIAL SITE</title>
   <style>
     body {
@@ -61,7 +60,7 @@
     }
   </style>
   
-  <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" crossorigin />
+  <link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="./main.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
@@ -76,32 +75,30 @@
     <span class="loader-text">ぱむるん</span>
   </div>
 
-  <div id="main-content" style="display: none;">
+  <div id="main-content">
   <header>
     <h1>ぱむるん OFFICIAL SITE</h1>
   </header>
 
-  <nav>
-    <nav class="menu">
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul>
-          <li><a href="https://pamupamulun.github.io/music">作品紹介</a></li>
-          <li><a href="https://pamupamulun.github.io/news">お知らせ</a></li>
-          <li><a href="https://pamupamulun.github.io/guideline">楽曲使用のガイドライン</a></li>
-          <li><a href="https://pamupamulun.github.io/contact">楽曲制作依頼・お問い合わせ</a></li>
-        </ul>
-    </nav>
-  </nav>
 
-  <div class="image-container" data-aos="fade-up">
-    <img src="ぱむるん.png" class="full-width-img" alt="ぱむるん" />
-  </div>
+<nav class="menu">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="https://pamupamulun.github.io/music">作品紹介</a></li>
+      <li><a href="https://pamupamulun.github.io/news">お知らせ</a></li>
+      <li><a href="https://pamupamulun.github.io/guideline">楽曲使用のガイドライン</a></li>
+      <li><a href="https://pamupamulun.github.io/contact">楽曲制作依頼・お問い合わせ</a></li>
+    </ul>
+</nav>
 
-  <section id="about" data-aos="fade-up">
+
+<img src="ぱむるん.png" class="full-width-img hero-fadeup" alt="ぱむるん">
+
+  <section class="about" data-aos="fade-up">
     <h2>ぱむるんについて</h2>
     <p>小2から作曲を始める。</p>
     <p>中2の頃にボカロに興味を持ち、DTMを始める(2024年6月)。</p>
@@ -116,7 +113,7 @@
   </section>
 
 
-  <section id="about" data-aos="fade-up">
+  <section class="about" data-aos="fade-up">
     <h2>各種SNS</h2>
     <p>メインで活動している2つ</p>
     <div class="social-links">
@@ -135,7 +132,7 @@
       <a href="https://music.apple.com/jp/artist/%E3%81%B1%E3%82%80%E3%82%8B%E3%82%93/1815859044?l=en-US" target="_blank">Apple Music</a>
     </div>
     <p>もちろんほかのサイトでもサブスク配信してます！</p>
-    <p><h1 class="space"></h1></p>
+    <div class="space"></div>
     <p>YouTubeなどでは、「かる～くゆる～くDTM(略してかるゆる)」というものをやってます！</p>
     <p>ちょっと気分のときに短時間でパパっと仕上げる曲をシリーズ化しました～
     <p>(かなり短時間で曲を作るシリーズなので、クオリティには期待しないでください)</p>
