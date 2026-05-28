@@ -29,31 +29,27 @@
        2px -2px 0 #fff,
       -2px  2px 0 #fff,
        2px  2px 0 #fff;
-    /* 追加（WebKit限定） */
     -webkit-text-stroke: 1.5px white;
   }
 
-/* メニューのスタイル */
 .menu {
   position: fixed;
   top: 0;
-  right: -100%; /* 初期状態では画面の外に隠れている */
+  right: -100%;
   width: 300px;
   height: 100%;
   background-color: #80F0B0;
   color: #333;
-  transition: right 0.3s ease; /* スライドインのアニメーション */
+  transition: right 0.3s ease;
   padding: 20px;
   box-sizing: border-box;
   z-index: 10;
 }
 
-/* メニューが開いているとき */
 .menu.open {
   right: 0;
 }
 
-/* ボタンのスタイル */
 .hamburger {
   position: fixed;
   top: 15px;
@@ -101,7 +97,6 @@
   transform: translateX(-50%) rotate(-45deg);
 }
 
-/* メニューリストのスタイル */
 .menu ul {
   list-style-type: none;
   padding: 0;
