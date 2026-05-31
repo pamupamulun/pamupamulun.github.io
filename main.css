@@ -32,6 +32,15 @@
     -webkit-text-stroke: 1.5px white;
   }
 
+.loader-image {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-image: url("photo.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 .menu {
   position: fixed;
   top: 0;
